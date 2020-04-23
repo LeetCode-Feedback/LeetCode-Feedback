@@ -1,0 +1,68 @@
+---
+name: Bug report (English)
+about: Create a report to help us improve
+title: 'Incorrect expected output'
+labels: ''
+assignees: ''
+
+---
+
+**What kind of the bug**
+- [ ] problem
+- [X] solution
+- [ ] language
+
+**Describe the bug**
+The Expected value for this case is incorrect. 
+Although the first character in both files is fine, the length of the first string is 
+greater than the second and hence the output should be false.
+Input:
+["kuvp","q"]
+"ngxlkthsjuoqcpavbfdermiywz"
+Output:
+false
+Expected:
+true
+
+**what language is your code written in**
+Java
+
+**The code you submit/run**
+```
+// Verifying an Alien Dictionary
+class Solution {
+    public boolean isAlienSorted(String[] words, String order) {
+        HashMap <Character, Integer> map = new HashMap();
+        for(int i = 0; i < order.length(); i ++){
+            map.put(order.charAt(i), i);
+        }
+        
+        for(int i = 0; i < words.length-1; i ++){
+            int j = i+1;         
+            int k = Math.min(words[i].length(), words[j].length());                
+            for(int x = 0; x < k; x++){
+                char iChar = words[i].charAt(x);
+                char jChar = words[j].charAt(x);
+                if(map.get(iChar) < map.get(iChar)){
+                    continue;
+                }else if(map.get(iChar) > map.get(iChar)){
+                    return false;
+                } 
+            }
+            if(words[i].length() > words[j].length()){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
+
+**Expected behavior**
+The Expected value for this case should be false.
+
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+
+**Additional context**
+https://leetcode.com/submissions/detail/328876549/
