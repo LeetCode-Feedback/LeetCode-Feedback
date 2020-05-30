@@ -1,39 +1,58 @@
 ---
 name: Bug report (English)
-about: Create a report to help us improve
+about: Create bug report to help us improve our content.
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**What kind of the bug**
-- [ ] problem
-- [ ] solution
-- [ ] language
+<!--
+Note - Any content mention below in `<!-- ->` blocks are just comments
+to help you fill up the issue. It won't be visible in actual issue after
+you click on submit.
+-->
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+#### Your LeetCode username
+<!-- Your LeetCode username -->
 
-**what language is your code written in**
-C++
 
-**The code you submit/run**
+#### Category of the bug
+- [ ] Question
+- [ ] Solution
+- [ ] Language
+
+
+#### Description of the bug
+<!-- A clear and concise description of what the bug is. -->
+
+
+#### Code you used for Submit/Run operation
+
 ```
 // Two Sum
 class Solution {
 public:
     vector<int> twoSum(vector<int> &a, int s) {
-        
+
     }
 };
 ```
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+#### Language used for code
+<!-- C++ -->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
 
-**Additional context**
-Add any other context about the problem here.
+#### Expected behavior
+<!-- A clear and concise description of what you expected to happen in
+contrast with what actually happened. -->
+
+
+
+#### Screenshots
+<!-- If applicable, add screenshots to explain your issue. -->
+
+
+
+#### Additional context
+<!-- Add any other additional context about the bug. -->
