@@ -1,6 +1,6 @@
 ---
 name: Bug report (English)
-about: Create bug report to help us improve our content.
+about: Create a bug report to help us improve our content.
 title: ''
 labels: ''
 assignees: ''
@@ -9,7 +9,7 @@ assignees: ''
 
 <!--
 Note - Any content mention below in `<!-- ->` blocks are just comments
-to help you fill up the issue. It won't be visible in actual issue after
+to help you fill-up the issue. It won't be visible in the actual issue after
 you click on submit.
 -->
 
