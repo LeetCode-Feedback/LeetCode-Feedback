@@ -14,7 +14,7 @@ you click on submit.
 -->
 
 #### Your LeetCode username
-<!-- Your LeetCode username -->
+chakKritip
 
 
 #### Category of the bug
@@ -24,7 +24,7 @@ you click on submit.
 
 
 #### Description of the bug
-<!-- A clear and concise description of what the bug is. -->
+<!-- There is a testcase which is giving me wrong answer while submitting but it is giving me correct answer while compiling. -->
 
 
 #### Code you used for Submit/Run operation
@@ -34,28 +34,55 @@ Otherwise we may reject your request.
 -->
 
 ```
-// Two Sum
-class Solution {
-public:
-    vector<int> twoSum(vector<int> &a, int s) {
-
+class Solution 
+{
+//     public boolean wordBreak(String s, List<String> wordDict) 
+//     {
+        
+//     }
+    public static HashMap<String, Boolean> map=new HashMap<String, Boolean>();
+    public static boolean wordBreak(String s, List<String> dict )
+    {
+        if(s.length()==0)
+        {
+            map.put(s,true);    
+            return true;
+        }
+        
+        for(int i=1;i<=s.length();i++)
+        {
+            String sub=s.substring(0, i);
+            
+            if(dict.contains(sub))
+            {
+                if(map.containsKey(s.substring(i))==false)
+                map.put(s.substring(i),wordBreak(s.substring(i), dict));
+                
+                if(map.get(s.substring(i)))
+                {
+                    //System.out.println(s.substring(i));
+                    return true;
+                }
+            } 
+        }
+        map.put(s,false);
+        return false;
     }
-};
+}
 ```
 
 #### Language used for code
-<!-- C++ -->
+<!-- Java -->
 
 
 #### Expected behavior
-<!-- A clear and concise description of what you expected to happen in
-contrast with what actually happened. -->
+<!-- Expected that Leetcode generates the same output all the time. -->
 
 
 
 #### Screenshots
 <!-- If applicable, add screenshots to explain your issue. -->
-
+Will attach the screenshot
 
 
 #### Additional context
