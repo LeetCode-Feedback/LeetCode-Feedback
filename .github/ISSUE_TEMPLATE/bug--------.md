@@ -7,6 +7,9 @@ assignees: ''
 
 ---
 
+**你的 LeetCode 用户名**
+填写你登录 LeetCode（中国区）的用户名
+
 **Bug 类型**
 - [ ] 题目
 - [ ] 题解
