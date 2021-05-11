@@ -1,8 +1,8 @@
 ---
-name: Bug report (English)
-about: Create a bug report to help us improve our content.
-title: ''
-labels: ''
+name: Better solution
+about: 1423. Maximum Points You Can Obtain from Cards
+title: 'Better one pass solution'
+labels: 'Better solution'
 assignees: ''
 
 ---
@@ -14,14 +14,11 @@ you click on submit.
 -->
 
 #### Your LeetCode username
-<!-- Your LeetCode username -->
+<!-- sameer.aswal -->
 
 
 #### Category of the bug
-- [ ] Question
 - [ ] Solution
-- [ ] Language
-- [ ] Missing Test Cases 
 
 
 #### Description of the bug
@@ -35,17 +32,30 @@ Otherwise we may reject your request.
 -->
 
 ```
-// Two Sum
-class Solution {
-public:
-    vector<int> twoSum(vector<int> &a, int s) {
-
+//1423. Maximum Points You Can Obtain from Cards
+var maxScore = function(cardPoints, k) {
+    /*In every possible ans there will be a continues window of the size cardPoints.length-k for which we will not collect the points. We need to check that window of the size cardPoints.length-k with the having minimum sum. 
+    Then we can remove this minimu sum of the windown from total array sum. This will be our answer.
+    */
+    let windowSize=cardPoints.length-k,arrSum=0,minWindowSum=Number.MAX_SAFE_INTEGER,windowSum=0;
+    for(let i=0;i<cardPoints.length;i++){
+        arrSum+=cardPoints[i];
+        if(i<=windowSize-1){
+            windowSum+=cardPoints[i];
+        }else{
+            windowSum+=cardPoints[i];
+            windowSum-=cardPoints[i-windowSize];
+        }
+        if(i>=windowSize-1){
+            minWindowSum = Math.min(minWindowSum,windowSum);
+        }
     }
-};
+    return arrSum-minWindowSum;
+}
 ```
 
 #### Language used for code
-<!-- C++ -->
+<!-- Javascript -->
 
 
 #### Expected behavior
