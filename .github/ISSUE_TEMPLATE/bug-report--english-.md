@@ -1,7 +1,7 @@
 ---
 name: Bug report (English)
 about: Create a bug report to help us improve our content.
-title: ''
+title: 'Diameter of Binary Tree'
 labels: ''
 assignees: ''
 
@@ -14,18 +14,18 @@ you click on submit.
 -->
 
 #### Your LeetCode username
-<!-- Your LeetCode username -->
+<!-- Kranuj3122 -->
 
 
 #### Category of the bug
 - [ ] Question
-- [ ] Solution
+- [**] Solution
 - [ ] Language
 - [ ] Missing Test Cases 
 
 
 #### Description of the bug
-<!-- A clear and concise description of what the bug is. -->
+<!-- My Code Runs successfully. But on submitting the solution gives me Wrong Answer for the same Input([1,2]). -->
 
 
 #### Code you used for Submit/Run operation
@@ -35,27 +35,56 @@ Otherwise we may reject your request.
 -->
 
 ```
-// Two Sum
+//543 Diameter of Binary Tree
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
 class Solution {
-public:
-    vector<int> twoSum(vector<int> &a, int s) {
-
+    static int res = 0;
+    public static int helper(TreeNode root) {
+        if(root == null) {
+            return 0;
+        }
+        int l = helper(root.left);
+        int r = helper(root.right);
+        int temp = Math.max(l, r) + 1;
+        int ans = Math.max(temp, l+r+1);
+        res = Math.max(ans, res);
+        return temp;
     }
-};
+    public int diameterOfBinaryTree(TreeNode root) {
+        int t = helper(root);
+        if(res != 0) {
+            return res-1;
+        }
+        return res;
+    }
+}
 ```
 
 #### Language used for code
-<!-- C++ -->
+<!-- Java -->
 
 
 #### Expected behavior
-<!-- A clear and concise description of what you expected to happen in
-contrast with what actually happened. -->
+<!-- For the same input output should be same before and after the submission -->
 
 
 
 #### Screenshots
-<!-- If applicable, add screenshots to explain your issue. -->
+<!-- ![Screenshot (664)](https://user-images.githubusercontent.com/43272788/136839731-1c522d65-9837-4b02-bf3e-41bb1a869ad5.png) -->
 
 
 
