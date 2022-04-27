@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+> 若您之前未通过 GitHub 提交测试用例，原来在主站上提交的测试用例情况可通过 https://leetcode.cn/contribute/ 查看
+
 **你的 LeetCode 用户名**
 填写你登录 LeetCode（中国区）的用户名
 
