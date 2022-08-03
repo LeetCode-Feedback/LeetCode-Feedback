@@ -1,0 +1,32 @@
+//Solution to 1944: Number of Visible People in a Queue
+
+//Author: user6803M
+//Profile: https://leetcode.com/user6803M/
+
+class Solution { 
+    public int[] canSeePersonsCount(int[] heights) {
+        int[] result = new int[heights.length];
+        
+        if(heights.length >= 2) {
+            java.util.Stack<Integer> stack = new java.util.Stack<Integer>();
+            stack.push(heights[heights.length - 1]);
+            
+            int i = heights.length - 2;
+            
+            while(i >= 0) {
+                while(!stack.isEmpty() && heights[i] > stack.peek()) {
+                    result[i]++;
+                    stack.pop();
+                }
+                if(!stack.isEmpty()) {
+                    result[i]++;
+                }
+                stack.push(heights[i]);
+                i--;
+            }
+        }
+        
+        return result;
+    }
+}
+
