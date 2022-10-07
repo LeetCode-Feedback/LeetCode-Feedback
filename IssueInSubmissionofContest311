@@ -1,0 +1,122 @@
+Your LeetCode username
+Pradeep Kumar
+pradeep_kumar_3325
+Category of the bug
+Submission errors
+Description of the bug
+Code you used for Submit/Run operation
+public class Solution {
+    public int[] SumPrefixScores(string[] words) {
+            Trie trie = new Trie();
+            for (int i = 0; i <= words.Length - 1; i++)
+            {
+                trie.Insert(words[i]);
+            }
+
+            trie.DFS(Trie.Root);
+
+            int[] answer = new int[words.Length];
+
+            for (int i = 0; i <= words.Length - 1; i++)
+            {
+                answer[i] = trie.GetNoofPrefix(words[i]);
+            }
+
+        //answer[0]=4;
+            return answer;
+        
+    }
+    
+    public class Node
+        {
+            public bool IsEnd { get; set; }
+
+            public Node[] chidren = new Node[26];
+
+            public char Value { get; set; }
+
+            public int NoofPreffix { get; set; }
+        }
+
+        public class Trie
+        {
+            public static Node Root;
+            public void Insert(string word)
+            {
+                if (Root == null)
+                {
+                    Root = new Node();
+                }
+
+                Node current = Root;
+                int index;
+
+                for (int i = 0; i <= word.Length - 1; i++)
+                {
+                    index = word[i] - 'a';
+                    if (current.chidren[index] == null)
+                        current.chidren[index] = new Node();
+                    current.chidren[index].Value = word[i];
+                    current = current.chidren[index];
+                }
+
+
+                current.IsEnd = true;
+            }
+
+            public int DFS(Node root)
+            {
+                if (root == null) return 0;
+
+                int count = 0;
+                foreach (Node node in root.chidren)
+                {
+                   count += DFS(node);
+                }
+
+                if (root.IsEnd)
+                {
+                    count = count + 1;
+                }
+                root.NoofPreffix = count;
+                return root.NoofPreffix;
+            }
+
+            public int GetNoofPrefix(string word)
+            {
+                Node current = Trie.Root;
+                int ans = 0;
+                for (int i = 0; i <= word.Length - 1; i++)
+                {
+                    current = current.chidren[word[i] - 'a'];
+                    ans += current.NoofPreffix;
+                }
+
+                return ans;
+            }
+        }
+}
+
+Language used for code
+C#
+
+
+Expected behavior
+Excepted result is 4 for input ["abcd"]
+
+Screenshots with Additional context
+I believe there is an issue in submission of “2416. Sum of Prefix Scores of Strings of weekly-contest-311” because when I submit my solution then it gives wrong answer for this testcase 
+
+ 
+
+But when I execute custom testcase with same input in it pass
+
+ 
+
+
+Even when I run the same solution on my local with same input it returns excepted result that is 4. Please refer to the below screen shot from my local machine.
+
+ 
+
+So, it seems there is issue submission for this input. My solution in C#
+
