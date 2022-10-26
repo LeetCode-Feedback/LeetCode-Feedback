@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 <!--
-Note - Any content mention below in `<!-- ->` blocks are just comments
+Note - Any content mentioned below in `<!-- ->` blocks are just comments
 to help you fill-up the issue. It won't be visible in the actual issue after
 you click on submit.
 -->
