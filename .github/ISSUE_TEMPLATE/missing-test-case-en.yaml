@@ -1,0 +1,111 @@
+---
+name: Missing Test Case
+description: Report a missing test case to help us improve our content.
+title: "Missing Test Case - <problem ID and name>"
+labels: ["LCUS", "watchlist", "problem"]
+assignees:
+  - LC-Pam
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to fill out this report!
+  - type: input
+    id: username
+    attributes:
+      label: LeetCode username
+      description: >
+        Please enter your LeetCode username so that we can reward
+        your contribution when the issue is resolved.
+    validations:
+      required: false
+  - type: textarea
+    id: "description"
+    attributes:
+      label: Bug description
+      description: A clear and concise description of what the bug is.
+      placeholder: >
+        The submission below currently gets AC, 
+        but should get WA because ...
+    validations:
+      required: true
+  - type: dropdown
+    id: expected
+    attributes:
+      label: Expected verdict
+      description: What verdict you expected to get instead of Accepted?
+      options:
+        - Wrong Answer
+        - Time Limit Exceeded
+        - Runtime Error
+        - Memory Limit Exceeded
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code
+      description: |
+        Code you used for Submit/Run operation.
+        This will be automatically formatted as code, so no need for backticks.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: test
+    attributes:
+      label: Missing Test Case
+      description: |
+        What is the missing test case?
+        You can attach a file if your test case is too big to copy-paste.
+        If you want to, you can also share a generator, preferably in Python3.
+    validations:
+      required: true
+  - type: dropdown  # this chould be an input
+    id: language
+    attributes:
+      label: Language
+      description: Language used for code
+      options:
+        - C++
+        - Java
+        - Python
+        - Python3
+        - C
+        - "C#"
+        - JavaScript
+        - Ruby
+        - Swift
+        - Go
+        - Scala
+        - Kotlin
+        - Rust
+        - PHP
+        - Typescript
+        - Racket
+        - Erlang
+        - Elixir
+        - Dart
+        - MySQL
+        - MS SQL Server
+        - Oracle
+        - Bash
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other additional context about the bug.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Terms of Service
+      description: >
+        By submitting this issue, you agree to our
+        [Terms of Service](https://leetcode.com/terms/)
+      options:
+        - label: I agree to this project's Terms of Service
+          required: true
+...
