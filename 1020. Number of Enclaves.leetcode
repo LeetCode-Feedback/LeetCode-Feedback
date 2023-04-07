@@ -1,0 +1,46 @@
+
+//easy solution using found component in graph 
+//simple use of dfs graph
+class Solution {
+public:
+     bool cycle=true;
+     bool is_valid(int i,int j,int n,int m)
+    {   
+        return i>=0 and i<n and j>=0 and j<m;
+    }
+    void dfs(vector<vector<int>>&grid,int i,int j,int n,int m,vector<vector<int>>&ans,int &count)
+    {   //cout<<"YES  ";
+        if(i==0 ||j==0 || i==n-1 ||j==m-1){cycle=false;}
+        grid[i][j]=-1;
+        count+=1;
+        for(int t=0;t<4;t++)
+        {
+           int t1=i+ans[t][0],t2=j+ans[t][1];
+            
+            if(is_valid(t1,t2,n,m) and grid[t1][t2]==1)
+            {  
+                dfs(grid,t1,t2,n,m,ans,count);
+            }
+        }
+    }
+    int numEnclaves(vector<vector<int>>& grid) {
+        int c=0,n=grid.size(),m=grid[0].size();
+        vector<vector<int>>ans={{1,0},{-1,0},{0,1},{0,-1}};
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<m;j++)
+            {
+                if(grid[i][j]==1)
+                {   cycle=true;
+                    int count=0;
+                    dfs(grid,i,j,n,m,ans,count);
+                    if(cycle==true)
+                    {
+                        c+=count;
+                    }
+                }
+            }
+        }
+        return c;
+    }
+};
