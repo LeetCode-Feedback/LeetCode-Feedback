@@ -1,0 +1,11 @@
+# 1697. Checking Existence of Edge Length Limited Paths
+The first sample example of this question:
+Input: n = 3, edgeList = [[0,1,2],[1,2,4],[2,0,8],[1,0,16]], queries = [[0,1,2],[0,2,5]]
+Output: [false,true]
+Explanation: The above figure shows the given graph. Note that there are two overlapping edges between 0 and 1 with distances 2 and 16.
+For the first query, between 0 and 1 there is no path where each distance is less than 2, thus we return false for this query.
+For the second query, there is a path (0 -> 1 -> 2) of two edges with distances less than 5, thus we return true for this query.
+
+The second output in the boolean array should be  "FALSE" because according to the question the cumulative value of the shortest path is coming greater than 5.
+This is not in compliance to the question. According to the question the path should be less than the limit which is given 5 for this edge and the smallest path is 6.
+Kindly look upon this issue.
