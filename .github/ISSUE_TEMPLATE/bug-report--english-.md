@@ -1,8 +1,8 @@
 ---
-name: Bug report (English)
-about: Create a bug report to help us improve our content.
-title: ''
-labels: ''
+name: Pull Request with Solution
+about: Solving a leetcode problems
+title: 'Merge Sorted Array'
+labels: 'Array/String'
 assignees: ''
 
 ---
@@ -13,13 +13,13 @@ to help you fill-up the issue. It won't be visible in the actual issue after
 you click on submit.
 -->
 
-#### Your LeetCode username
+#### koyuncuoglum95
 <!-- Your LeetCode username -->
 
 
 #### Category of the bug
 - [ ] Question
-- [ ] Solution
+- [x] Solution
 - [ ] Language
 - [ ] Missing Test Cases 
 
@@ -35,17 +35,29 @@ Otherwise we may reject your request.
 -->
 
 ```
-// Two Sum
-class Solution {
-public:
-    vector<int> twoSum(vector<int> &a, int s) {
 
+var merge = function(nums1, m, nums2, n) {
+    
+    for(let k = m + n - 1; k >= 0; k--) {
+        if(n === 0) {
+            return;
+        }
+       
+        if(m < 1 || nums2[n - 1] > nums1[m - 1]) {
+           
+            nums1[k] = nums2[--n];
+        } else {
+           
+            nums1[k] = nums1[--m];
+        }
     }
 };
+
 ```
 
 #### Language used for code
 <!-- C++ -->
+JavaScript
 
 
 #### Expected behavior
@@ -56,6 +68,7 @@ contrast with what actually happened. -->
 
 #### Screenshots
 <!-- If applicable, add screenshots to explain your issue. -->
+<img width="952" alt="mergeSorted" src="https://github.com/koyuncuoglum95/LeetCode-Feedback/assets/77508734/72f6952d-e548-413c-acf6-1396be75048c">
 
 
 
