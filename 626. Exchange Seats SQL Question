@@ -1,0 +1,92 @@
+
+
+My Leatcode username is:darshan_01010
+My gmail:vasanidarshan55@gmail.com 
+
+626. Exchange Seats
+SQL Question
+issue is based on description of question give deffrent and in test case there diffrent output is correct for same input
+Example 1:
+
+Input: 
+Seat table:
++----+---------+
+| id | student |
++----+---------+
+| 1  | Abbot   |
+| 2  | Doris   |
+| 3  | Emerson |
+| 4  | Green   |
+| 5  | Jeames  |
++----+---------+
+Output: 
++----+---------+
+| id | student |
++----+---------+
+| 1  | Doris   |
+| 2  | Abbot   |
+| 3  | Green   |
+| 4  | Emerson |
+| 5  | Jeames  |
++----+---------+
+Explanation: 
+Note that if the number of students is odd, there is no need to change the last one's seat.
+
+
+Test Case:
+Wrong Answer
+Runtime: 121 ms
+Case 1
+Input
+Seat =
+| id | student |
+| -- | ------- |
+| 1  | Abbot   |
+| 2  | Doris   |
+| 3  | Emerson |
+| 4  | Green   |
+| 5  | Jeames  |
+Output
+| id | student |
+| -- | ------- |
+| 1  | Doris   |
+| 2  | Emerson |
+| 3  | Green   |
+| 4  | Jeames  |
+| 5  | Jeames  |
+Expected
+| id | student |
+| -- | ------- |
+| 1  | Abbot   |
+| 2  | Doris   |
+| 3  | Emerson |
+| 4  | Green   |
+| 5  | Jeames  |
+
+Problem Report - Exchange Seats (Question 626)
+
+Description:
+The problem description provides one example and its expected output. However, the test case provided in the question contradicts the expected output mentioned in the description.
+
+Existing Test Cases:
+The provided test case does not match the expected output mentioned in the problem description. The comparison of the output with a different expected output is leading to an incorrect assessment of the solution.
+
+Missing Test Cases:
+There are no additional test cases provided to validate the correctness of the solution for different scenarios and edge cases. Including more test cases would help ensure the accuracy of the solution.
+
+Solution Content Issues:
+The provided solution may be correct, but due to the discrepancy between the test case and the expected output mentioned in the description, it is not possible to accurately determine the correctness of the solution.
+The editorial solution provided matches the expected output mentioned in the problem description, but it does not match the output of the given test case.
+
+Recommendation:
+1. Verify the expected output mentioned in the problem description.
+2. Update the test case to match the expected output from the description or provide a new test case that accurately represents the expected output.
+3. Test the solution against the updated test case or additional test cases to validate its correctness.
+4. Review the editorial solution to ensure it aligns with the problem description and the expected output.
+5. Carefully compare the logic and implementation in the editorial solution with the provided test case to identify any discrepancies.
+6. If the editorial solution is correct and the test case is incorrect, update the test case to reflect the expected output described in the problem description.
+7. If there are any doubts about the correctness of the editorial solution or the test case, seek clarification from the problem setter or platform administrators.
+
+Submission Errors:
+There is no information provided about any submission errors.
+
