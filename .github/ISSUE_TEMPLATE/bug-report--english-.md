@@ -9,55 +9,64 @@ assignees: ''
 
 <!--
 Note - Any content mentioned below in `<!-- ->` blocks are just comments
-to help you fill-up the issue. It won't be visible in the actual issue after
-you click on submit.
+to help in filling up the issue. It won't be visible in the actual issue after
+submitting the issue.
 -->
 
-#### Your LeetCode username
-<!-- Your LeetCode username -->
+### LeetCode Username
+<!-- Click on the right top corner of the problem
+page after logging in to get the username. -->
 
 
-#### Category of the bug
-- [ ] Question
-- [ ] Solution
-- [ ] Language
-- [ ] Missing Test Cases 
+### Problem number, title, and link
+<!-- Example    
+1. Two Sum https://leetcode.com/problems/two-sum/
+-->
 
 
-#### Description of the bug
+### Category of the bug
+- [ ] Problem description
+- [ ] Solved examples
+- [ ] Problem constraints
+- [ ] Problem hints
+- [ ] Incorrect or missing "Related Topics"
+- [ ] Incorrect test Case *(Output of test case is incorrect as per the problem statement)*
+- [ ] Missing test Case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
+- [ ] Editorial
+- [ ] Programming language support
+
+
+### Description of the bug
 <!-- A clear and concise description of what the bug is. -->
 
 
-#### Code you used for Submit/Run operation
-<!-- 
-Please make sure you wrap your code with ``` tags. 
-Otherwise we may reject your request. 
--->
-
-```
-// Two Sum
-class Solution {
-public:
-    vector<int> twoSum(vector<int> &a, int s) {
-
-    }
-};
-```
-
-#### Language used for code
+### Language used for code
 <!-- C++ -->
 
 
-#### Expected behavior
-<!-- A clear and concise description of what you expected to happen in
-contrast with what actually happened. -->
+### Code used for Submit/Run operation
+<!-- 
+Please make sure to wrap the code with ``` tags. 
+Otherwise, the issue may be closed without any information.
+
+Replace the code below with your code.
+
+-->
+
+```
+// Paste your code here. Don't remove ``` given
+// above and below the code.
+```
 
 
+### Expected behavior
+<!-- A clear and concise description of what was expected to happen in
+contrast with what happened. -->
 
-#### Screenshots
-<!-- If applicable, add screenshots to explain your issue. -->
+
+### Screenshots
+<!-- If applicable, add screenshots to explain the issue. -->
 
 
-
-#### Additional context
+### Additional context
 <!-- Add any other additional context about the bug. -->
