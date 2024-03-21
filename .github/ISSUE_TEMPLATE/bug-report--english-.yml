@@ -1,0 +1,102 @@
+name: "Bug Report (English)"
+description: Create a bug report to help us improve our content.
+title: "[BUG] - <title>"
+labels: []
+body:
+  - type: input
+    id: username
+    attributes:
+      label: "LeetCode Username"
+      description: Click your avatar in the top right on the problem page after logging in to find your username.
+    validations:
+      required: true
+  - type: input
+    id: problem-details
+    attributes:
+      label: "Problem Number, Title, and Link"
+      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+    validations:
+      required: true
+  - type: dropdown
+    id: bug-category
+    attributes:
+      label: "Bug Category"
+      multiple: true
+      options:
+        - Problem description
+        - Problem examples
+        - Problem constraints
+        - Problem hints
+        - Incorrect or missing "Related Topics"
+        - Incorrect test case *(Output of test case is incorrect as per the problem statement)*
+        - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
+        - Editorial
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: dropdown
+    id: language-used
+    attributes:
+      label: "Language Used for Code"
+      options:
+        - C++
+        - Java
+        - Python/Python3
+        - C
+        - C#
+        - JavaScript
+        - TypeScript
+        - PHP
+        - Swift
+        - Kotlin
+        - Dart
+        - Go
+        - Ruby
+        - Scala
+        - Rust
+        - Racket
+        - Erlang
+        - Elixir
+        - MySQL
+        - MSSQL
+        - Oracle SQL
+        - PostgreSQL
+        - Pandas
+        - Bash
+    validations:
+      required: false
+  - type: textarea
+    id: code
+    attributes:
+      label: Code used for Submit/Run operation
+      description: Please copy and paste the complete code you used for submit/run operation. This will be automatically formatted into code, so no need for backticks.
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what was expected to happen in contrast with what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to explain the issue.
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other additional context about the bug.
+    validations:
+      required: false
