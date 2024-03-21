@@ -1,64 +1,102 @@
----
-name: Bug 反馈 (中文）
-about: 你的反馈能够帮助我们更好的改善产品
-title: ''
-labels: ''
-assignees: ''
-
----
-
-> 若您之前未通过 GitHub 提交测试用例，原来在主站上提交的测试用例情况可通过 https://leetcode.cn/contribute/ 查看
-
-
-### LeetCode 用户名
-<!-- 填写你登录 LeetCode（中国区）的用户名 -->
-
-
-### 问题号码、标题和链接
-<!-- 示例
-1. 两数之和 https://leetcode.cn/problems/two-sum/description/
--->
-
-
-### Bug 类型
-- [ ] 问题描述
-- [ ] 示例
-- [ ] 问题限制
-- [ ] 问题提示
-- [ ] 不正确或缺少“相关标签”
-- [ ] 不正确的测试用例 *（根据问题陈述，测试用例的输出不正确）*
-- [ ] 缺少测试用例 *（由于缺少测试用例而接受不正确/低效的代码）*
-- [ ] 力扣官方题解
-- [ ] 编程语言支持
-
-
-### 描述
-<!-- 描述你遇到的 bug -->
-
-
-### 你使用的语言
-<!-- C++ -->
-
-
-### 你提交或者运行的代码
-
-<!-- 请确保用 ``` 标签包裹代码。
-否则，力扣客服可能因为无法重现问题，关闭您的反馈。
-
-将下面的代码替换为您的代码 -->
-
-```
-// 将您的代码粘贴到此处
-```
-
-
-### 期望行为
-<!-- 描述你期望的结果 -->
-
-
-### 屏幕截图
-<!-- 添加屏幕截图协助我们定位问题 -->
-
-
-### 额外的上下文
-<!-- 添加额外的上下文信息 -->
+name: "Bug 反馈 (中文）"
+description: 你的反馈能够帮助我们更好的改善产品
+title: "[BUG] - <缺陷标题>"
+labels: []
+body:
+  - type: input
+    id: username
+    attributes:
+      label: "LeetCode 用户名"
+      description: 填写你登录 LeetCode（中国区）的用户名
+    validations:
+      required: true
+  - type: input
+    id: problem-details
+    attributes:
+      label: "问题号码、标题和链接"
+      placeholder: 1. 两数之和 https://leetcode.cn/problems/two-sum/description/
+    validations:
+      required: true
+  - type: dropdown
+    id: bug-category
+    attributes:
+      label: "Bug Category"
+      multiple: true
+      options:
+        - 问题描述
+        - 示例
+        - 问题限制
+        - 问题提示
+        - 不正确或缺少“相关标签”
+        - 不正确的测试用例 *（根据问题陈述，测试用例的输出不正确）*
+        - 缺少测试用例 *（由于缺少测试用例而接受不正确/低效的代码）*
+        - 力扣官方题解
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "描述"
+      description: 描述你遇到的 bug
+    validations:
+      required: true
+  - type: dropdown
+    id: language-used
+    attributes:
+      label: "你使用的语言"
+      options:
+        - C++
+        - Java
+        - Python/Python3
+        - C
+        - C#
+        - JavaScript
+        - TypeScript
+        - PHP
+        - Swift
+        - Kotlin
+        - Dart
+        - Go
+        - Ruby
+        - Scala
+        - Rust
+        - Racket
+        - Erlang
+        - Elixir
+        - MySQL
+        - MSSQL
+        - Oracle SQL
+        - PostgreSQL
+        - Pandas
+        - Bash
+    validations:
+      required: false
+  - type: textarea
+    id: code
+    attributes:
+      label: 你提交或者运行的代码
+      description: 请复制并粘贴您用于提交/运行操作的完整代码。这将自动格式化为代码，不需要使用反引号。
+      render: bash
+    validations:
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: 期望行为
+      description: 描述你期望的结果
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 屏幕截图
+      description: 添加屏幕截图协助我们定位问题
+    validations:
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 额外的上下文
+      description: 添加额外的上下文信息
+    validations:
+      required: false
