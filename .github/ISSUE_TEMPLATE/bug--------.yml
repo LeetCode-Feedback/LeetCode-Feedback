@@ -1,5 +1,5 @@
 name: "Bug 反馈 (中文）"
-description: 你的反馈能够帮助我们更好的改善产品
+description: 您的反馈能够帮助我们更好的改善产品
 title: "[BUG] - <缺陷标题>"
 labels: []
 body:
@@ -7,7 +7,7 @@ body:
     id: username
     attributes:
       label: "LeetCode 用户名"
-      description: 填写你登录 LeetCode（中国区）的用户名
+      description: 填写您登录 LeetCode（中国区）的用户名
     validations:
       required: true
   - type: input
@@ -37,13 +37,13 @@ body:
     id: bug-description
     attributes:
       label: "描述"
-      description: 描述你遇到的 bug
+      description: 描述您遇到的 bug
     validations:
       required: true
   - type: dropdown
     id: language-used
     attributes:
-      label: "你使用的语言"
+      label: "您使用的语言"
       options:
         - C++
         - Java
@@ -74,7 +74,7 @@ body:
   - type: textarea
     id: code
     attributes:
-      label: 你提交或者运行的代码
+      label: 您提交或者运行的代码
       description: 请复制并粘贴您用于提交/运行操作的完整代码。这将自动格式化为代码，不需要使用反引号。
       render: bash
     validations:
@@ -83,7 +83,7 @@ body:
     id: expected-behavior
     attributes:
       label: 期望行为
-      description: 描述你期望的结果
+      description: 描述您期望的结果
     validations:
       required: true
   - type: textarea
