@@ -18,7 +18,7 @@ Below are the types of issues that will fall under this filing method:
 * Editorial content issues such as:
     * Missing approach
     * Video errors
-    * Editorial code is not workings
+    * Editorial code is not working
     * Animation/figure related issues
 
 For any other billing or site-related issues, please reach out to us via our [Help Center](https://support.leetcode.com/hc/en-us).
