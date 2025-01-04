@@ -1,6 +1,4 @@
-name: "Bug Report (English)"
-description: Create a bug report to help us improve our content.
-title: "[BUG] - <title>"
+title: "[BUG] - Missing Test Case for Majority Element Problem"
 labels: []
 body:
   - type: input
@@ -10,6 +8,7 @@ body:
       description: Click your avatar in the top right on the problem page after logging in to find your username.
     validations:
       required: true
+    value: "KhatwangadarReddy"
   - type: input
     id: problem-details
     attributes:
@@ -17,6 +16,7 @@ body:
       placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
     validations:
       required: true
+    value: "Majority Element https://leetcode.com/problems/majority-element/"
   - type: dropdown
     id: bug-category
     attributes:
@@ -33,6 +33,8 @@ body:
         - Editorial
     validations:
       required: true
+    value:
+      - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
   - type: textarea
     id: bug-description
     attributes:
@@ -40,6 +42,13 @@ body:
       description: A clear and concise description of what the bug is.
     validations:
       required: true
+    value: |
+      The problem statement specifies that the "majority element" is defined as the element that appears more than ⌊n / 2⌋ times in the array. However, the current test suite does not include cases where the candidate returned by the algorithm does not satisfy this condition.
+
+      For example, consider the input array `[1, 2, 3, 4]`.
+      The expected output should be an error or failure because no element appears more than ⌊n / 2⌋ (2) times. However, the given solution incorrectly returns a value because it does not validate the frequency of the candidate.
+
+      Adding such test cases would ensure that solutions strictly adhere to the definition of the majority element.
   - type: dropdown
     id: language-used
     attributes:
@@ -71,21 +80,46 @@ body:
         - Bash
     validations:
       required: false
+    value: "Java"
   - type: textarea
     id: code
     attributes:
-      label: Code used for Submit/Run operation
+      label: "Code used for Submit/Run operation"
       description: Please copy and paste the complete code you used for submit/run operation. This will be automatically formatted into code, so no need for backticks.
       render: bash
     validations:
       required: false
+    value: |
+      class Solution {
+          public int majorityElement(int[] nums) {
+              int maj = 0, ele = 0;
+              for (int i = 0; i < nums.length; i++) {
+                  if (maj == 0) {
+                      ele = nums[i];
+                  }
+                  if (ele == nums[i]) maj++;
+                  else maj--;
+              }
+              return ele;
+          }
+      }
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected behavior
+      label: "Expected behavior"
       description: A clear and concise description of what was expected to happen in contrast with what happened.
     validations:
       required: true
+    value: |
+      This code is currently being accepted but fails to verify the majority condition correctly. A missing validation step results in incorrect outputs for cases where no element is the majority.
+
+      Example test case and output:
+
+      - **Input:** `[1, 2, 3, 4]`
+      - **Expected Output:** Error or failure indicating no majority element exists.
+      - **Current Output:** Returns an incorrect element.
+
+      Adding test cases like this would enforce the correct majority element condition.
   - type: textarea
     id: screenshots
     attributes:
@@ -93,10 +127,13 @@ body:
       description: If applicable, add screenshots to explain the issue.
     validations:
       required: false
+    value: ""
   - type: textarea
     id: additional-context
     attributes:
-      label: Additional context
+      label: "Additional context"
       description: Add any other additional context about the bug.
     validations:
       required: false
+    value: |
+      Including such test cases would help eliminate incorrect solutions and improve user understanding of the problem requirements.
