@@ -1,4 +1,4 @@
-title: "[BUG] - Missing Test Case for Valid Parentheses Problem"
+title: "[BUG] - Missing Test Case for Majority Element Problem"
 labels: []
 body:
   - type: input
@@ -8,7 +8,7 @@ body:
       description: Click your avatar in the top right on the problem page after logging in to find your username.
     validations:
       required: true
-    value: "khatwangadarReddy"
+    value: "KhatwangadarReddy"
   - type: input
     id: problem-details
     attributes:
@@ -16,7 +16,7 @@ body:
       placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
     validations:
       required: true
-    value: "Valid Parentheses https://leetcode.com/problems/valid-parentheses/"
+    value: "Majority Element https://leetcode.com/problems/majority-element/"
   - type: dropdown
     id: bug-category
     attributes:
@@ -43,11 +43,12 @@ body:
     validations:
       required: true
     value: |
-      The problem statement specifies that "Open brackets must be closed in the correct order." However, the test case "({)}" is not included in the test suite. Adding this test case would ensure that solutions adhere strictly to this rule.
-      For instance:
-      - "({)}" should return false because the open "{" is incorrectly closed by ")" instead of "}".
+      The problem statement specifies that the "majority element" is defined as the element that appears more than ⌊n / 2⌋ times in the array. However, the current test suite does not include cases where the candidate returned by the algorithm does not satisfy this condition.
 
-      Currently, incorrect or inefficient solutions might pass all tests because they are not tested against this case.
+      For example, consider the input array `[1, 2, 3, 4]`.
+      The expected output should be an error or failure because no element appears more than ⌊n / 2⌋ (2) times. However, the given solution incorrectly returns a value because it does not validate the frequency of the candidate.
+
+      Adding such test cases would ensure that solutions strictly adhere to the definition of the majority element.
   - type: dropdown
     id: language-used
     attributes:
@@ -79,7 +80,7 @@ body:
         - Bash
     validations:
       required: false
-    value: "Python3"
+    value: "Java"
   - type: textarea
     id: code
     attributes:
@@ -89,17 +90,19 @@ body:
     validations:
       required: false
     value: |
-      def isValid(s):
-          stack = []
-          mapping = {')': '(', '}': '{', ']': '['}
-          for char in s:
-              if char in mapping:
-                  top_element = stack.pop() if stack else '#'
-                  if mapping[char] != top_element:
-                      return False
-              else:
-                  stack.append(char)
-          return not stack
+      class Solution {
+          public int majorityElement(int[] nums) {
+              int maj = 0, ele = 0;
+              for (int i = 0; i < nums.length; i++) {
+                  if (maj == 0) {
+                      ele = nums[i];
+                  }
+                  if (ele == nums[i]) maj++;
+                  else maj--;
+              }
+              return ele;
+          }
+      }
   - type: textarea
     id: expected-behavior
     attributes:
@@ -108,11 +111,15 @@ body:
     validations:
       required: true
     value: |
-      Adding the test case "({)}" to the test suite should fail any solution that does not check for the correct order of closing brackets.
+      This code is currently being accepted but fails to verify the majority condition correctly. A missing validation step results in incorrect outputs for cases where no element is the majority.
 
-      Example outputs:
-      - Input: "({)}"
-      - Output: false
+      Example test case and output:
+
+      - **Input:** `[1, 2, 3, 4]`
+      - **Expected Output:** Error or failure indicating no majority element exists.
+      - **Current Output:** Returns an incorrect element.
+
+      Adding test cases like this would enforce the correct majority element condition.
   - type: textarea
     id: screenshots
     attributes:
@@ -129,4 +136,4 @@ body:
     validations:
       required: false
     value: |
-      Including this test case would help users better understand the rules of the problem and enforce stricter validations for solutions.
+      Including such test cases would help eliminate incorrect solutions and improve user understanding of the problem requirements.
