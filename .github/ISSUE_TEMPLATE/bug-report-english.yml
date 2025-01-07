@@ -14,7 +14,7 @@ body:
     id: problem-details
     attributes:
       label: "Problem Number, Title, and Link"
-      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+      placeholder: 451. Sort Characters By Frequency https://leetcode.com/problems/sort-characters-by-frequency/
     validations:
       required: true
   - type: dropdown
