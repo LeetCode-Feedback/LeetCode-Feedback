@@ -1,6 +1,6 @@
 name: "Bug Report (English)"
 description: Create a bug report to help us improve our content.
-title: "[BUG] - <title>"
+title: "[BUG] - Missing test case"
 labels: []
 body:
   - type: input
@@ -14,7 +14,7 @@ body:
     id: problem-details
     attributes:
       label: "Problem Number, Title, and Link"
-      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+      placeholder: 1. Count Pairs Whose Sum is Less than Target https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/description/
     validations:
       required: true
   - type: dropdown
@@ -23,21 +23,14 @@ body:
       label: "Bug Category"
       multiple: true
       options:
-        - Problem description
-        - Problem examples
-        - Problem constraints
-        - Problem hints
-        - Incorrect or missing "Related Topics"
-        - Incorrect test case *(Output of test case is incorrect as per the problem statement)*
         - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
-        - Editorial
     validations:
       required: true
   - type: textarea
     id: bug-description
     attributes:
       label: "Bug Description"
-      description: A clear and concise description of what the bug is.
+      description: In the description it is given that return the number of pairs (i, j) where 0 <= i < j < n, meaning the order of the pair matters. However, if the list is sorted and pairs are found, it is still accepted.
     validations:
       required: true
   - type: dropdown
@@ -45,30 +38,7 @@ body:
     attributes:
       label: "Language Used for Code"
       options:
-        - C++
         - Java
-        - Python/Python3
-        - C
-        - C#
-        - JavaScript
-        - TypeScript
-        - PHP
-        - Swift
-        - Kotlin
-        - Dart
-        - Go
-        - Ruby
-        - Scala
-        - Rust
-        - Racket
-        - Erlang
-        - Elixir
-        - MySQL
-        - MSSQL
-        - Oracle SQL
-        - PostgreSQL
-        - Pandas
-        - Bash
     validations:
       required: false
   - type: textarea
@@ -82,8 +52,8 @@ body:
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected behavior
-      description: A clear and concise description of what was expected to happen in contrast with what happened.
+      label: "Expected behavior"
+      description: The solution should not be accepted if the originally given order of pairs is not followed.
     validations:
       required: true
   - type: textarea
