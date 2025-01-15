@@ -1,6 +1,6 @@
 name: "Bug Report (English)"
 description: Create a bug report to help us improve our content.
-title: "[BUG] - <title>"
+title: "[BUG] - Minimize XOR Incorrect Test Case"
 labels: []
 body:
   - type: input
@@ -14,7 +14,7 @@ body:
     id: problem-details
     attributes:
       label: "Problem Number, Title, and Link"
-      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+      placeholder: "2509. Minimize XOR https://leetcode.com/problems/minimize-xor/"
     validations:
       required: true
   - type: dropdown
@@ -74,7 +74,7 @@ body:
   - type: textarea
     id: code
     attributes:
-      label: Code used for Submit/Run operation
+      label: "Code used for Submit/Run operation"
       description: Please copy and paste the complete code you used for submit/run operation. This will be automatically formatted into code, so no need for backticks.
       render: bash
     validations:
@@ -82,21 +82,21 @@ body:
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected behavior
+      label: "Expected behavior"
       description: A clear and concise description of what was expected to happen in contrast with what happened.
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots
+      label: "Screenshots"
       description: If applicable, add screenshots to explain the issue.
     validations:
       required: false
   - type: textarea
     id: additional-context
     attributes:
-      label: Additional context
+      label: "Additional context"
       description: Add any other additional context about the bug.
     validations:
       required: false
