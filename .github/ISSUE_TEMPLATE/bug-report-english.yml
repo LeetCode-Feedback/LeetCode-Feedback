@@ -7,14 +7,9 @@ body:
     id: username
     attributes:
       label: "LeetCode Username"
-      description: Click your avatar in the top right on the problem page after logging in to find your username.
-    validations:
-      required: true
-  - type: input
-    id: problem-details
-    attributes:
-      label: "Problem Number, Title, and Link"
-      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+      description: >
+        You can find your username (LeetCode ID) in the "Account Information"
+        section of your [Profile page](https://leetcode.com/profile/account/).
     validations:
       required: true
   - type: dropdown
@@ -28,9 +23,11 @@ body:
         - Problem constraints
         - Problem hints
         - Incorrect or missing "Related Topics"
-        - Incorrect test case *(Output of test case is incorrect as per the problem statement)*
-        - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
+        - Incorrect test case (Output of test case is incorrect as per the problem statement)
+        - Missing test case (Incorrect/Inefficient Code getting accepted because of missing test cases)
         - Editorial
+        - Explore Card
+        - Interview Crash Course
     validations:
       required: true
   - type: textarea
@@ -40,6 +37,29 @@ body:
       description: A clear and concise description of what the bug is.
     validations:
       required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected behavior"
+      description: >
+        A clear and concise description of what was expected to happen
+        in contrast with what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: If applicable, add screenshots to explain the issue.
+    validations:
+      required: false
+  - type: input
+    id: problem-details
+    attributes:
+      label: "Problem Number, Title, and Link"
+      placeholder: 1. Two Sum https://leetcode.com/problems/two-sum/
+    validations:
+      required: false
   - type: dropdown
     id: language-used
     attributes:
@@ -74,29 +94,15 @@ body:
   - type: textarea
     id: code
     attributes:
-      label: Code used for Submit/Run operation
+      label: "Code used for Submit/Run operation"
       description: Please copy and paste the complete code you used for submit/run operation. This will be automatically formatted into code, so no need for backticks.
       render: bash
     validations:
       required: false
   - type: textarea
-    id: expected-behavior
-    attributes:
-      label: Expected behavior
-      description: A clear and concise description of what was expected to happen in contrast with what happened.
-    validations:
-      required: true
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: If applicable, add screenshots to explain the issue.
-    validations:
-      required: false
-  - type: textarea
     id: additional-context
     attributes:
-      label: Additional context
+      label: "Additional context"
       description: Add any other additional context about the bug.
     validations:
       required: false
