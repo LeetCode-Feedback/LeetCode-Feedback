@@ -1,4 +1,4 @@
-name: "Bug Report (English)"
+6name: "Bug Report (English)"
 description: Create a bug report to help us improve our content.
 title: "[BUG] - <title>"
 labels: []
@@ -31,6 +31,9 @@ body:
         - Incorrect test case *(Output of test case is incorrect as per the problem statement)*
         - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
         - Editorial
+        - UI Bug
+        - Solution page bug
+        - Performance/scaling issues in the problem page
     validations:
       required: true
   - type: textarea
