@@ -1,24 +1,49 @@
-# LeetCode-Feedback
+# LeetCode Feedback
 
-English | [简体中文](./README-CN.md)
+Welcome to the official feedback repository for [LeetCode](https://leetcode.com) and [LeetCode China](https://leetcode.cn).
 
-With LeetCode-Feedback, we are providing a more transparent method for filing content-related issues you've encountered on [LeetCode](https://leetcode.com)/[LeetCode China](https://leetcode.cn). To share these issues with us, you can create an issue in this Github repo.
+We’re committed to improving the quality of our platform, and this space is dedicated to **content-related issue tracking** — so your feedback can directly shape a better experience for the entire community.
 
-Below are the types of issues that will fall under this filing method:
+---
 
-* Problem content issues on:
-    * Description
-    * Solved examples
-    * Constraints
-    * Hints
-    * Related topics
-    * Incorrect existing test cases
-    * Missing test cases
+## 📝 What You Can Report
 
-* Editorial content issues such as:
-    * Missing approach
-    * Video errors
-    * Editorial code is not workings
-    * Animation/figure related issues
+Please create an issue in this repository for any of the following:
 
-For any other billing or site-related issues, please reach out to us via our [Help Center](https://support.leetcode.com/hc/en-us).
+### 📌 Problem Content Issues
+
+- Typos, ambiguities, or errors in:
+  - Problem **descriptions**
+  - **Examples** (including solved ones)
+  - **Constraints**
+  - **Hints**
+  - **Related topics**
+- Issues with test cases:
+  - Incorrect test cases
+  - Missing or edge test cases
+
+### 📘 Editorial Content Issues
+
+- Missing or incomplete **approaches**
+- **Editorial code** that doesn't work
+- Broken or unclear **videos**, **animations**, or **diagrams**
+
+---
+
+## 🛑 Not Supported Here
+
+For platform-related issues (billing, login, submissions not working, etc.), please contact us via our [Help Center](https://support.leetcode.com/hc/en-us).
+
+---
+
+## 🌐 Languages
+
+- [English](./README.md)
+- [简体中文](./README-CN.md)
+
+---
+
+## 🤝 Thank You
+
+We appreciate your help in making LeetCode better. Every report contributes to a more accurate, reliable, and user-friendly platform for millions of users.
+
