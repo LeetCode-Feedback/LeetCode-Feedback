@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>(); // Criando um mapa
+
+        for (int i = 0; i < nums.length; i++) { // Percorrendo o array
+            int complement = target - nums[i]; // Calculando complemento
+
+            if (map.containsKey(complement)) { // Se complemento já existe
+                return new int[] { map.get(complement), i }; // Retorna índices
+            }
+
+            map.put(nums[i], i); // Adiciona número e índice ao mapa
+        }
+
+        throw new IllegalArgumentException("Nenhuma solução encontrada!");
+    }
+}
