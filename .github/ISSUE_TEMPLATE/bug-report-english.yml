@@ -30,6 +30,7 @@ body:
         - Incorrect or missing "Related Topics"
         - Incorrect test case *(Output of test case is incorrect as per the problem statement)*
         - Missing test case *(Incorrect/Inefficient Code getting accepted because of missing test cases)*
+        - Inadequate Evaluation Logic *(Incorrect or Inefficient Code accepted due to gaps in the problem's validation logic)*
         - Editorial
     validations:
       required: true

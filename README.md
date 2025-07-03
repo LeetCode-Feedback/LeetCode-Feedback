@@ -13,6 +13,7 @@ Below are the types of issues that will fall under this filing method:
     * Hints
     * Related topics
     * Incorrect existing test cases
+    * Inadequate Evaluation Logic
     * Missing test cases
 
 * Editorial content issues such as:
