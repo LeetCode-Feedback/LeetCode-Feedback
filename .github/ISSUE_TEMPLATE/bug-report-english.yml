@@ -4,7 +4,7 @@ title: "[BUG] - <title>"
 labels: []
 body:
   - type: input
-    id: username
+    id: AU16glojkt
     attributes:
       label: "LeetCode Username"
       description: Click your avatar in the top right on the problem page after logging in to find your username.
