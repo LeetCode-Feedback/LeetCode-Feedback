@@ -2,7 +2,7 @@
 
 English | [简体中文](./README-CN.md)
 
-With LeetCode-Feedback, we are providing a more transparent method for filing content-related issues you've encountered on [LeetCode](https://leetcode.com)/[LeetCode China](https://leetcode.cn). To share these issues with us, you can create an issue in this Github repo.
+With LeetCode-Feedback, we are providing a more transparent method for filing content-related issues you've encountered on [LeetCode](http://web.archive.org/web/20260722050058/https://leetcode.com/)/[LeetCode China](http://web.archive.org/web/20260624184804/https://leetcode.cn/). To share these issues with us, you can create an issue in this Github repo.
 
 Below are the types of issues that will fall under this filing method:
 

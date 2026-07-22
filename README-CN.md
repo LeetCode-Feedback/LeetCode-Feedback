@@ -2,7 +2,7 @@
 
 [English](./README.md) | 简体中文
 
-通过LeetCode反馈，我们提供了一种更透明的方法来归档您在[力扣](https://leetcode.com)/[力扣中国](https://leetcode.cn)上遇到的与内容相关的问题。 要与我们分享这些问题，您可以在此Github仓库中创建一个issue。
+通过LeetCode反馈，我们提供了一种更透明的方法来归档您在[力扣](http://web.archive.org/web/20260722050058/https://leetcode.com/)/[力扣中国](http://web.archive.org/web/20260624184804/https://leetcode.cn/)上遇到的与内容相关的问题。 要与我们分享这些问题，您可以在此Github仓库中创建一个issue。
 
 以下是属于此归档方法的问题类型：
 
@@ -21,4 +21,4 @@
     * 给定的代码不起作用
     * 绘图/图像问题
 
-对于任何其他计费或与网站相关的问题，请通过我们的[帮助中心](https://support.leetcode.cn/hc/)联系我们。
+对于任何其他计费或与网站相关的问题，请通过我们的[帮助中心](http://web.archive.org/web/20251213160722/http://support.leetcode.cn/hc/)联系我们。
